@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <script>
+        document.documentElement.style.fontSize = window.innerWidth / 750 * 100 + "px";
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <a href="./login.html"><span class="iconfont icon icon-yonghu"></span></a>
+            <a href="#"><span class="sp2"> <b class="active">书城</b><b>书架</b></span>
+            </a>
+            <a href="./login.html"><span class="iconfont icon icon-yonghu"></span></a>
+        </header>
+        <main class="swiper-container main">
+            <div class="swiper-wrapper table1">
+                <div class="tab1 swiper-slide">
+                    <div class="scroll-b" data-up="上拉加载更多...">
+                        <!-- input -->
+                        <div class="inp">
+                            <a href="./search.html"><input type="text" placeholder="输入书名/作者/关键字"></a>
+
+                        </div>
+                        <!-- 轮播 -->
+                        <div class="banner swiper-container swiper-no-swiping">
+                            <div class="swiper-wrapper banner-ban">
+
+                            </div>
+                        </div>
+                        <!--导航-->
+                        <ul class="top-home__btn">
+                            <li data-href="#page=channel&amp;id=664" data-title="限免"><img class="top-home__icon" src="http://image.read.duokan.com/mfsv2/download/s010/p015iBxwdkmU/5wc5uzYhLZ7iVa.png">
+                                <p class="top-home__des">限免</p>
+                            </li>
+                            <li data-href="#page=channel&amp;id=370" data-title="女生"><img class="top-home__icon" src="http://image.read.duokan.com/mfsv2/download/s010/p01LWZmXGCpy/aSrSq6Llgt9PqE.png">
+                                <p class="top-home__des">女生</p>
+                            </li>
+                            <li data-href="#page=channel&amp;id=369" data-title="男生"><img class="top-home__icon" src="http://image.read.duokan.com/mfsv2/download/fdsc3/p01NVfuCskSL/W9VPXMnDunLwGT.png">
+                                <p class="top-home__des">男生</p>
+                            </li>
+                            <li data-href="/hs/market/cate" data-title="分类"><img class="top-home__icon" src="http://image.read.duokan.com/mfsv2/download/s010/p01pz5NtyRI0/2ENONnvOg23NXM.png">
+                                <p class="top-home__des">分类</p>
+                            </li>
+                            <li data-href="/hs/market/rank" data-title="排行"><img class="top-home__icon" src="http://image.read.duokan.com/mfsv2/download/s010/p010kK7M5VyH/8kPz9nKvRXyu1k.png">
+                                <p class="top-home__des">排行</p>
+                            </li>
+                        </ul>
+                        <!-- 本周最火 -->
+                        <div class="week-hot">
+
+                        </div>
+                        <!-- 重磅推荐 -->
+                        <div class="recommed">
+
+                        </div>
+                        <!-- 女生最爱 -->
+                        <div class="girl">
+
+                        </div>
+                        <!-- 男生最爱 -->
+                        <div class="boy">
+
+                        </div>
+                        <!-- 限时免费 -->
+                        <div class="free">
+
+                        </div>
+                        <!-- 精选专题 -->
+                        <div class="beautiful">
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tab2 swiper-slide">
+                    <div class="scroll-b">
+                        <!-- input -->
+                        <div class="inp">
+                            <a href="./search.html"><input type="text" placeholder="输入书名/作者/关键字"></a><span class="page-btn show"></span>
+                        </div>
+                        <div class="book_ts"></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </main>
+
+    </div>
+    <script src="./js/lib/require.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+        require(['index']);
+    </script>
+</body>
+
+</html>

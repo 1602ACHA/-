@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .user-login {
+            font-size: 0.32rem;
+            width: 80%;
+            margin: 50px auto;
+            display: block;
+        }
+        
+        .user-login label,
+        .user-login input {
+            display: block;
+            width: 100%;
+            margin-top: 0.3rem;
+        }
+        
+        .user-login input {
+            border: 1px solid #ccc;
+            height: 0.8rem;
+            padding: 0.2rem;
+        }
+        
+        .user-login .tip {
+            margin-top: 0.3rem;
+            color: red;
+        }
+        
+        .user-login button {
+            width: 100%;
+            margin-top: 0.3rem;
+            background: orange;
+            text-align: center;
+            line-height: 0.8rem;
+            display: block;
+            border: none;
+            border-radius: 0.05rem;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="user-login">
+        <label>用户名:</label>
+        <input type="text" class="text" placeholder="用户名/手机号/邮箱">
+        <label>密码:</label>
+        <input type="password" class="pwd" placeholder="密码">
+        <p class="tip"></p>
+        <button class="loginbtn" type="button">登录</button>
+    </form>
+    <script src="./js/lib/require.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+        require(['loginssss'])
+    </script>
+</body>
+
+</html>

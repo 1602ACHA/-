@@ -1,0 +1,23 @@
+<h2>{{ad_name}}</h2>
+<ul>
+    {{#iflength data.data}} {{#each this}}
+    <li>
+        <a href="./page.html?active_id={{fiction_id}}">
+            <dl>
+                <dt><img src="{{cover}}" alt=""></dt>
+                <dd>
+                    <h2>{{title}}
+                    </h2>
+                    <p class="p1">{{authors}}</p>
+                    <p class="p2">{{summary}}</p>
+                    <p class="p3">
+                        {{#each tags}}
+                        <span>{{this}}</span> {{/each}}
+                    </p>
+                </dd>
+            </dl>
+        </a>
+    </li>
+    {{/each}}{{/iflength}}
+</ul>
+<span><a href="#">换一换</a><a href="#">男生频道</a></span>

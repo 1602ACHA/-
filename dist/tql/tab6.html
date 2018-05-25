@@ -1,0 +1,17 @@
+<h2>{{ad_name}}</h2>
+<ul>
+    {{#each data.data}}
+    <li>
+
+        <a href="./page.html?active_id={{fiction_id}}">
+            <dl>
+                <dt><img src="{{data.book_cover}}" alt=""></dt>
+                <dd>
+                    <p>{{data.authors}}</p>
+                </dd>
+            </dl>
+        </a>
+    </li>
+    {{/each}}
+</ul>
+<span><a href="#">更多限免佳作</a></span>

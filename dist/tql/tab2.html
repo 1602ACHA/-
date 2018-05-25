@@ -1,0 +1,12 @@
+<h2>{{ad_name}}</h2>
+<div class="dls">
+    {{#each data.data}}
+    <a href="./page.html?active_id={{fiction_id}}">
+        <dl>
+            <dt><img src="{{cover}}" alt=" "></dt>
+            <dd>{{title}}</dd>
+        </dl>
+    </a>
+    {{/each}}
+</div>
+<span><a href="#">查看更多</a></span>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        document.documentElement.style.fontSize = window.innerWidth / 750 * 100 + "px";
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .wrap,
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            font-size: 0.32rem;
+        }
+        
+        .inp {
+            width: 100%;
+            height: 1.2rem;
+            background: #eee;
+            line-height: 1.2rem;
+            position: relative;
+        }
+        
+        .inp input {
+            width: 70%;
+            height: 0.6rem;
+            margin-left: 3%;
+            text-indent: 0.2rem;
+            border: solid 1px #ccc;
+        }
+        
+        .inp button {
+            border: solid 1px #ccc;
+            border-left-color: #fff;
+            background: #fff;
+            padding: 0.06rem 0.07rem 0.09rem;
+        }
+        
+        .wrap section {
+            width: 100%;
+            height: auto;
+        }
+        
+        .wrap section span {
+            padding: 0 0.25rem;
+        }
+        
+        .wrap section span a {
+            color: #999;
+            text-decoration: none;
+            padding: 0.15rem;
+            display: inline-block;
+            border-radius: 0.25rem;
+        }
+        
+        .wrap section span:nth-child(3n+2) a {
+            background: #fbebe8;
+        }
+        
+        .wrap section span:nth-child(3n) a {
+            background: #e8f9db;
+        }
+        
+        .wrap section span:nth-child(3n+1) a {
+            background: #fcedda;
+        }
+        
+        .wrap section span.active a {
+            background: #ccc;
+        }
+        
+        .intro {
+            width: 100%;
+        }
+        
+        .intro a {
+            text-decoration: none;
+            color: #000;
+        }
+        
+        .intro dl {
+            display: flex;
+        }
+        
+        .intro dl dt {
+            width: 2rem;
+            height: 3rem;
+        }
+        
+        .intro dl dt img {
+            width: 2rem;
+            height: 3rem;
+        }
+        
+        .intro dl dd {
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="inp"><span><a href="/index.html"></a></span> <input type="text" placeholder="输入书名/作者/关键字" class="input"><span class="btn"><button type="button">搜索</button></span></div>
+        <section>
+        </section>
+        <div class="intro">
+
+        </div>
+    </div>
+    <script id="see" type="text/x-handlebars-template">
+        <ul>
+            {{#if items.length}} {{#each items}}
+            <li>
+                <a href="#">
+                    <dl>
+                        <dt><img src="{{cover}}" alt=""></dt>
+                        <dd>
+                            <h2>{{title}}</h2>
+                            <p>{{intro}}</p>
+                            <p>{{#each role}}
+                                <span>{{this}}</span> {{/each}}
+                            </p>
+                        </dd>
+                    </dl>
+                </a>
+            </li>
+            {{/each}} {{else}}
+            <div>暂无数据</div>
+            {{/if}}
+        </ul>
+    </script>
+    <script src="./js/lib/require.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+        require(['search']);
+    </script>
+</body>
+
+</html>
